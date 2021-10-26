@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Saludable</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div id="header">
+        <custom-header></custom-header>
+    </div>
+    <main>
+        <form id="form" method="post" action="https://formspree.io/f/xeqvwvdp" target="_blank">
+            <label>Nombre:
+                <input name="nombre" type="text" placeholder="Nombre">*
+            </label>
+            <label>Emal:
+                <input name="mail" type="email" placeholder="example@mail.com">*
+            </label>
+            <label>Telefono:
+                <input name="tel" type="tel" placeholder="88888888">
+            </label>
+            <label>Asunto:
+                <select name="asunto" >
+                    <option value="consulta">Consulta</option>
+                    <option value="Reclamo">Reclamo</option>
+                    <option value="sugerencia">Sugerencia</option>
+                </select>
+            </label>
+            <textarea name="consulta" id="" cols="30" rows="10" placeholder="Escriba su consulta..."></textarea>
+            <input type="submit" value="Enviar">
+        </form>
+    </main>
+    <footer></footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/formulario.js"></script>
+</body>
+</html>
