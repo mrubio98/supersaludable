@@ -1,0 +1,23 @@
+main{
+    display: grid;
+    grid-template-areas: "texto imagen";
+}
+
+main div{
+    grid-area: texto;
+    font-size: 0.9em;
+}
+
+main img{
+    grid-area: imagen;
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+@media screen and (max-width:640px) {
+    main{
+        grid-template-areas: "imagen"
+                             "texto";
+    }
+}

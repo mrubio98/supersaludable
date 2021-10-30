@@ -7,34 +7,59 @@
     <title>Super Saludable</title>
 
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/formulario.css">
 </head>
 <body>
     <div id="header">
         <custom-header></custom-header>
     </div>
+
     <main>
         <form id="form" method="post" action="https://formspree.io/f/xeqvwvdp" target="_blank">
-            <label>Nombre:
+            <label id="nombre">Nombre:
                 <input name="nombre" type="text" placeholder="Nombre">*
             </label>
-            <label>Emal:
+            <label id="mail">Email:
                 <input name="mail" type="email" placeholder="example@mail.com">*
             </label>
-            <label>Telefono:
+            <label id="telefono">Telefono:
                 <input name="tel" type="tel" placeholder="88888888">
             </label>
-            <label>Asunto:
+            <label id="asunto">Asunto:
                 <select name="asunto" >
                     <option value="consulta">Consulta</option>
                     <option value="Reclamo">Reclamo</option>
                     <option value="sugerencia">Sugerencia</option>
                 </select>
             </label>
-            <textarea name="consulta" id="" cols="30" rows="10" placeholder="Escriba su consulta..."></textarea>
-            <input type="submit" value="Enviar">
+            <textarea name="consulta" id="consulta" cols="30" rows="10" placeholder="Escriba su consulta..."></textarea>
+            <input type="submit" value="Enviar" id="boton">
         </form>
+        <div id="otras-consultas">
+            <section id="map-section">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0168878894506!2d-58.38375908417489!3d-34.603734465007136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses-419!2sar!4v1635270006329!5m2!1ses-419!2sar" id="map" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </section>
+            <section id="contacto-section">
+                <h3>Contactanos</h3>
+                <p>Tambien podes realizarnos consultas por nuestro mail, telefeno o Whatsapp</p>
+                <br>
+                <div>
+                    <img src="img/email_black_24dp.svg" alt="icono mail">
+                    <p>supersaludable@saludable.com.ar</p>
+                </div>
+                <br>
+                <div>
+                    <img src="img/smartphone_black_24dp.svg" alt="icono phone">
+                    <p>+54 9 1234-5678</p>
+                </div>
+            </section>
+        </div>
+        
     </main>
-    <footer></footer>
+    
+    <div id="footer">
+        <custom-footer></custom-footer>
+    </div>
     
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="scripts/main.js"></script>

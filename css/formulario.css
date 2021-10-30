@@ -1,0 +1,79 @@
+#form{
+    display: grid;
+    grid-template-areas:    "nombre mail"
+                            "telefono asunto"
+                            "consulta consulta"
+                            "espacio boton";
+    margin: 3rem 15%;
+}
+
+#nombre{
+    grid-area: nombre;
+}
+
+#mail{
+    grid-area: mail;
+}
+
+#telefono{
+    grid-area: telefono;
+}
+
+#asunto{
+    grid-area: asunto;
+}
+
+#consulta{
+    grid-area: consulta;
+}
+
+#boton{
+    grid-area: boton;
+}
+
+#otras-consultas{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#map{
+    width:800px;
+    height:600px;
+}
+
+#contacto-section{
+    font-size: 3rem;
+}
+
+#contacto-section div{
+    display: flex;
+    font-size: 3rem;
+}
+
+@media screen and (max-width:1080px) {
+    #form{
+        margin: 2rem 0%;
+    }
+    #map{
+        width: 100%;
+        height: 480px;
+    }
+
+    #otras-consultas{
+        display: block;
+    }
+}
+
+@media screen and (max-width:640px) {
+    #form{
+        grid-template-areas:    "nombre nombre" 
+                                "mail mail"
+                                "telefono telefono" 
+                                "asunto asunto"
+                                "consulta consulta"
+                                "espacio boton";
+        margin: 1rem 0;
+    }
+    
+}

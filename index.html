@@ -7,18 +7,60 @@
     <title>Super Saludable</title>
 
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <div id="header">
         <custom-header></custom-header>
     </div>
+
     <main>
+        <section id="cards">
+            <div class="card" v-for="(item, index) in items">
+                <img src="https://picsum.photos/200" alt="imagen producto" class="img-prod">
+                <h3 class="nombre-prod">{{item.nombre}}</h3>
+                <p class="precio-prod">${{item.precio}},00</p>
+                <button class="btn-prod" v-on:click="Agregar(index)">
+                    <img src="img/add_shopping_cart_white_24dp.svg" alt="icono carro">
+                    Agregar
+                </button>
+            </div>
+        </section>
+
+        <section>
+            <div class="titulo_carro">
+                <img src="img/shopping_cart_black_24dp.svg" alt="carrito icono">
+                <h2>Carrito</h2>
+            </div>
+
+            <div id="compras" v-if="carrito.length > 0">
+                <div class="compras" v-for="(item, index) in carrito">
+                    <img src="https://picsum.photos/200" alt="imagen producto" class="img-prod">
+                    <div>
+                        <h3 class="nombre-prod">{{item.nombre}}</h3>
+                        <p class="precio-prod">${{item.precio}},00</p>
+                    </div>
+                    <button class="btn-prod" v-on:click="Eliminar(index)">
+                        <img src="img/remove_shopping_cart_white_24dp.svg" alt="icono carro">
+                        Eliminar
+                    </button>
+                </div>
+                <div class="totales">
+                    <button id="comprar_btn" @click="Comprar()">Comprar</button>
+                    <p id="total_suma">${{suma}},00</p>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer>
-        
-    </footer>
+
+    <div id="footer">
+        <custom-footer></custom-footer>
+    </div>
+
+    
     
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="scripts/main.js"></script>
+    <script src="scripts/cards.js"></script>
 </body>
 </html>

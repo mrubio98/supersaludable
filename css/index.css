@@ -1,0 +1,112 @@
+:root {
+    --color-1: rgba(54, 89, 1, 1);
+    /* --color-2: rgba(23, 38, 0, 1); */
+    --color-3: rgba(119, 165, 19, 1);
+    --color-4: rgba(236, 242, 193, 1);
+    /* --color-5: rgba(236, 242, 60, 1); */
+}
+
+#cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card{
+    width: 250px;
+    height: 350px;
+    background-color: rgb(167, 167, 167);
+    border-radius: 10px;
+    margin: 5px;
+    border: black solid 1.5px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-prod{
+    border-radius: 10px;
+    border:black solid 5px;
+}
+
+.nombre-prod{
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.precio-prod{
+    width: 100%;
+    text-align: center;
+}
+
+.btn-prod{
+    width: 10rem;
+    height: 3rem;
+    border: black solid 2.5px;
+    background-color: rgb(32, 32, 32);
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-prod:hover{
+    border-color: rgba(0, 0, 0, 0);
+    background-color: black;
+}
+.btn-prod:active{
+    background-color: rgb(221, 221, 221);
+    border-color: black;
+    color: black;
+}
+
+.compras{
+    margin: 5px 10px;
+    background-color: rgb(167, 167, 167);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.compras div{
+    font-size: 5rem;
+}
+
+.titulo_carro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    font-style: italic;
+    margin: 10px 0%;
+}
+
+.totales{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin: 2px 3px;
+}
+
+#comprar_btn{
+    font-size: 2rem;
+    background-color: var(--color-3);
+    padding: 10px;
+    border-radius: 5%;
+    border: var(--color-1) solid;
+}
+#comprar_btn:hover{
+    background-color: var(--color-1);
+}
+#comprar_btn:active{
+    background-color: var(--color-4);
+}
+
+#total_suma{
+    font-size: 3rem;
+}
